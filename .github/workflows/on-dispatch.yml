@@ -1,0 +1,37 @@
+name: Respond to Baikary dispatch
+
+on:
+  repository_dispatch:
+    types:
+      - baikary-customize
+
+permissions:
+  contents: write
+
+jobs:
+  customize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Show payload
+        run: |
+          echo "Full name: ${{ github.event.client_payload.fullName }}"
+          echo "Site type: ${{ github.event.client_payload.siteType }}"
+
+      - name: Replace placeholders
+        run: |
+          find . -type f -name "*.tsx" -exec sed -i "s/{{FULL_NAME}}/${{ github.event.client_payload.fullName }}/g" {} +
+          find . -type f -name "*.tsx" -exec sed -i "s/{{SITE_TYPE}}/${{ github.event.client_payload.siteType }}/g" {} +
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "baikary-bot"
+          git config --global user.email "bot@baikary.com"
+          git add .
+          git commit -m "Customize Baikary"
+          git push --force-with-lease origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
