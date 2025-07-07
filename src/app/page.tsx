@@ -14,7 +14,7 @@ export default function Home() {
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
               <Sparkles className="w-4 h-4 text-primary-foreground" />
             </div>
-            <span className="text-xl font-semibold">{'{{SITE_TYPE}}'}</span>
+            <span className="text-xl font-semibold">{'business'}</span>
           </div>
           <nav className="hidden md:flex items-center space-x-6">
             <Button variant="ghost" size="sm">Features</Button>
@@ -28,15 +28,15 @@ export default function Home() {
       <main className="container mx-auto px-4 py-16">
         <div className="text-center max-w-3xl mx-auto">
           <Badge variant="secondary" className="mb-4">
-            Welcome to {'{{SITE_TYPE}}'}
+            Welcome to {'business'}
           </Badge>
           
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-            Hello, {'{{FULL_NAME}}'}
+            Hello, {'MONSTER'}
           </h1>
           
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-            Your personalized {'{{SITE_TYPE}}'} experience awaits. 
+            Your personalized {'business'} experience awaits. 
             Discover what makes this template special.
           </p>
 
@@ -62,7 +62,7 @@ export default function Home() {
               </div>
               <CardTitle className="text-lg">Lightning Fast</CardTitle>
               <CardDescription>
-                Optimized performance for the best {'{{SITE_TYPE}}'} experience
+                Optimized performance for the best {'business'} experience
               </CardDescription>
             </CardHeader>
           </Card>
@@ -86,7 +86,7 @@ export default function Home() {
               </div>
               <CardTitle className="text-lg">Beautiful Design</CardTitle>
               <CardDescription>
-                Crafted specifically for {'{{FULL_NAME}}'} with modern aesthetics
+                Crafted specifically for {'MONSTER'} with modern aesthetics
               </CardDescription>
             </CardHeader>
           </Card>
@@ -100,7 +100,7 @@ export default function Home() {
             Ready to get started?
           </h2>
           <p className="text-muted-foreground mb-6">
-            Join thousands of users who trust {'{{SITE_TYPE}}'} for their needs.
+            Join thousands of users who trust {'business'} for their needs.
           </p>
           <Button size="lg" className="gap-2">
             Start Your Journey
@@ -113,7 +113,7 @@ export default function Home() {
       <footer className="border-t mt-16">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center text-sm text-muted-foreground">
-            © 2024 {'{{SITE_TYPE}}'}. Built with ❤️ for {'{{FULL_NAME}}'}
+            © 2024 {'business'}. Built with ❤️ for {'MONSTER'}
           </div>
         </div>
       </footer>
